@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+sessions
+
+# Backpack build
+build
+.idea
+yarn.lock
+.DS_Store
+package-lock.json
