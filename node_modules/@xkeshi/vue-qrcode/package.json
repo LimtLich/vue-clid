@@ -1,0 +1,74 @@
+{
+  "name": "@xkeshi/vue-qrcode",
+  "description": "Qrcode component for Vue.js.",
+  "version": "1.0.0",
+  "main": "dist/vue-qrcode.common.js",
+  "module": "dist/vue-qrcode.esm.js",
+  "unpkg": "dist/vue-qrcode.js",
+  "repository": "xkeshi/vue-qrcode",
+  "homepage": "https://xkeshi.github.io/vue-qrcode",
+  "license": "MIT",
+  "author": {
+    "name": "Chen Fengyuan",
+    "url": "https://chenfengyuan.com"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "qrcode",
+    "vue",
+    "component",
+    "vue-component",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web",
+    "development"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "clear": "del-cli dist",
+    "compress": "uglifyjs ./dist/vue-qrcode.js -o ./dist/vue-qrcode.min.js -c -m --comments /^!/",
+    "dev": "rollup -c -m -w",
+    "lint": "eslint src test *.js --fix",
+    "release": "npm run clear && npm run lint && npm run build && npm run compress && npm test",
+    "start": "npm run dev",
+    "test": "karma start test/karma.conf.js"
+  },
+  "dependencies": {
+    "qrious": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "change-case": "^3.0.2",
+    "create-banner": "^1.0.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "karma": "^2.0.3",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-rollup-preprocessor": "^6.0.0",
+    "mocha": "^5.2.0",
+    "puppeteer": "^1.5.0",
+    "rollup": "^0.60.7",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-watch": "^4.3.1",
+    "uglify-js": "^3.4.1",
+    "vue": "^2.5.16"
+  },
+  "peerDependencies": {
+    "vue": "^2.2.0"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "china-lsrael-website",
+  "version": "1.0.0",
+  "description": "vue",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env HOST=0.0.0.0 PORT=3000 nuxt",
+    "build:test": "cross-env _ENV=test nuxt build",
+    "build:prod": "cross-env _ENV=production nuxt build",
+    "start:test": "cross-env _ENV=test HOST=0.0.0.0 PORT=3000 nuxt start",
+    "start:prod": "cross-env _ENV=production HOST=0.0.0.0 PORT=3000 nuxt start"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@xkeshi/vue-qrcode": "^1.0.0",
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "circular-json": "^0.5.5",
+    "cookie-universal-nuxt": "^2.0.5",
+    "element-ui": "^2.4.3",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "lodash": "^4.17.10",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "numeral": "^2.0.6",
+    "nuxt-edge": "2.2.0-25662130.e115890",
+    "qs": "^6.5.2",
+    "serve-static": "^1.13.2",
+    "session-file-store": "^1.2.0",
+    "superagent": "^3.8.3",
+    "ua-parser-js": "^0.7.18",
+    "uuid": "^3.3.2",
+    "vue-moment": "^4.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/proxy": "^1.2.4",
+    "cross-env": "^5.2.0",
+    "hbs": "^4.0.1",
+    "less": "^3.5.3",
+    "less-loader": "^4.1.0"
+  },
+  "element-theme": {
+    "browsers": [
+      "ie > 9",
+      "last 2 versions"
+    ],
+    "out": "./theme",
+    "theme": "element-theme-chalk",
+    "minimize": false,
+    "components": [
+      "button",
+      "input"
+    ]
+  }
+}
